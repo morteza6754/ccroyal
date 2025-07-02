@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="سایت شخصی ساده برای معرفی و دانلود فایل. آموزش ساخت سایت با HTML و CSS.">
+  <meta name="keywords" content="دانلود, سایت شخصی, HTML, آموزش طراحی سایت, برنامه نویسی">
+  <meta name="author" content="نام شما">
+
+  <title>سایت من | آموزش طراحی سایت</title>
+
+  <!-- فونت فارسی -->
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Vazirmatn', Tahoma, sans-serif;
+      background: linear-gradient(to right, #f9f9f9, #e6f7ff);
+      color: #333;
+      direction: rtl;
+    }
+
+    .navbar {
+      background-color: #003366;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .navbar a:hover {
+      background-color: #0055aa;
+    }
+
+    .content {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      color: #003366;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .button {
+      background-color: #0066cc;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #004a99;
+    }
+
+    footer {
+      margin-top: 60px;
+      background-color: #002244;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- منو -->
+  <div class="navbar">
+    <a href="#">خانه</a>
+    <a href="#">درباره من</a>
+    <a href="#">دانلودها</a>
+    <a href="#">تماس با من</a>
+  </div>
+
+  <!-- محتوا -->
+  <div class="content">
+    <h1>به سایت من خوش آمدید</h1>
+    <p>این یک سایت ساده بدون عکس است، ساخته‌شده با HTML و CSS برای یادگیری و تمرین طراحی سایت.</p>
+    <a href="lighthouse.jpg" download class="button">دانلود عکس</a>
+  </div>
+
+  <!-- پاورقی -->
+  <footer>
+    © 2025 سایت شخصی شما | طراحی شده با عشق
+  </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>خانه - سایت من</title>
+  <style>
+    body { font-family: Tahoma, sans-serif; background: #f9f9f9; padding: 20px; }
+    nav a { margin: 0 10px; text-decoration: none; color: #007bff; }
+    nav a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">خانه</a> |
+    <a href="about.html">درباره ما</a> |
+    <a href="contact.html">تماس با ما</a>
+  </nav>
+
+  <h1>خوش آمدید به سایت من!</h1>
+  <p>این صفحه اصلی سایت است. اینجا می‌توانید مطالب و محصولات خود را معرفی کنید.</p>
+
+  <a href="photo.jpg" download class="button">دانلود عکس</a>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <title>درباره ما</title>
+  <style>
+    body { font-family: Tahoma; padding: 10px; background: #f2f2f2; }
+    nav a { margin: 5px; text-decoration: none; color: blue; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">خانه</a>
+    <a href="about.html">درباره ما</a>
+    <a href="contact.html">تماس با ما</a>
+  </nav>
+
+  <h1>درباره ما</h1>
+  <p>ما یک سایت ساده ساخته‌ایم برای تمرین طراحی وب.</p>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <title>تماس با ما</title>
+  <style>
+    body { font-family: Tahoma; padding: 10px; background: #f2f2f2; }
+    nav a { margin: 5px; text-decoration: none; color: blue; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">خانه</a>
+    <a href="about.html">درباره ما</a>
+    <a href="contact.html">تماس با ما</a>
+  </nav>
+
+  <h1>تماس با ما</h1>
+  <p>برای تماس با ما ایمیل بزنید به: info@example.com</p>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <title>خانه</title>
+  <style>
+    body {
+      font-family: Tahoma;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #008cff;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #f2f2f2;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #008cff;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #0055aa;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #008cff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>سایت من</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">خانه</a>
+    <a href="about.html">درباره ما</a>
+    <a href="contact.html">تماس با ما</a>
+  </nav>
+
+  <main>
+    <p>خوش آمدید! این یک سایت تمرینی است برای یادگیری HTML و CSS.</p>
+    <a href="photo.jpg" download class="button">دانلود عکس</a>
+  </main>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <title>CCRoyal | سی‌سی رویال</title>
+  <style>
+    body {
+      font-family: Tahoma;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #008cff;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #f2f2f2;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #008cff;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #0055aa;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #008cff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>CCRoyal | سی‌سی رویال</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">خانه</a>
+    <a href="about.html">درباره ما</a>
+    <a href="contact.html">تماس با ما</a>
+  </nav>
+
+  <main>
+    <p>به CCRoyal خوش آمدید! مرجع فایل، بازی، آموزش و بیشتر.</p>
+    <a href="photo.jpg" download class="button">دانلود فایل</a>
+  </main>
+
+</body>
+</html>
