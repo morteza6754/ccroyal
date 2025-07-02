@@ -122,16 +122,10 @@
 </head>
 <body>
   <nav>
-    <a href="index.html">خانه</a> |
-    <a href="about.html">درباره ما</a> |
-    <a href="contact.html">تماس با ما</a>
-  </nav>
-
   <h1>خوش آمدید به سایت من!</h1>
   <p>این صفحه اصلی سایت است. اینجا می‌توانید مطالب و محصولات خود را معرفی کنید.</p>
 
-  <a href="photo.jpg" download class="button">دانلود عکس</a>
-</body>
+
 </html>
 <!DOCTYPE html>
 <html lang="fa">
@@ -165,14 +159,11 @@
   </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html">خانه</a>
-    <a href="about.html">درباره ما</a>
-    <a href="contact.html">تماس با ما</a>
+  
   </nav>
 
   <h1>تماس با ما</h1>
-  <p>برای تماس با ما ایمیل بزنید به: info@example.com</p>
+  <p>برای تماس با ما ایمیل بزنید به: zarrinfarmorteza@gmail.com</p>
 </body>
 </html>
 <!DOCTYPE html>
@@ -314,16 +305,663 @@
     <h1>CCRoyal | سی‌سی رویال</h1>
   </header>
 
-  <nav>
-    <a href="index.html">خانه</a>
-    <a href="about.html">درباره ما</a>
-    <a href="contact.html">تماس با ما</a>
-  </nav>
+ 
 
   <main>
     <p>به CCRoyal خوش آمدید! مرجع فایل، بازی، آموزش و بیشتر.</p>
     <a href="photo.jpg" download class="button">دانلود فایل</a>
   </main>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <title>مثال جاوااسکریپت</title>
+</head>
+<body>
+  <h1 id="title">سلام دنیا!</h1>
+  <button onclick="changeText()">کلیک کن</button>
+
+  <script>
+    function changeText() {
+      document.getElementById('title').innerText = "تو روی دکمه کلیک کردی!";
+    }
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <title>افکت تغییر رنگ</title>
+  <style>
+    #text {
+      font-size: 24px;
+      transition: color 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+  <p id="text">این متن رنگش تغییر می‌کند!</p>
+  <button onclick="changeColor()">تغییر رنگ</button>
+
+  <script>
+    function changeColor() {
+      const text = document.getElementById('text');
+      if (text.style.color === 'red') {
+        text.style.color = 'black';
+      } else {
+        text.style.color = 'red';
+      }
+    }
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+ 
+    const button = document.getElementById('myButton');
+    const message = document.getElementById('message');
+
+    button.addEventListener('click', () => {
+      message.classList.add('show');
+
+      setTimeout(() => {
+        message.classList.remove('show');
+      }, 3000); // پس از ۳ ثانیه پیام محو شود
+    });
+  </script>
+</body>
+</html>
+<style>
+  .menu {
+    display: none;
+    background: #3498db;
+    padding: 10px;
+    color: white;
+  }
+  .menu.active {
+    display: block;
+  }
+  .hamburger {
+    cursor: pointer;
+    font-size: 24px;
+  }
+</style>
+
+<div class="hamburger">&#9776;</div>
+<div class="menu">
+  <a href="#">خانه</a><br/>
+  <a href="#">درباره ما</a><br/>
+  <a href="#">تماس</a>
+</div>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const menu = document.querySelector('.menu');
+
+  hamburger.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+</script>
+<style>
+  .product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 200px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+  }
+  .product-card:hover {
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  }
+  .product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  .product-name {
+    font-size: 18px;
+    margin: 10px 0 5px;
+    color: #333;
+  }
+  .product-price {
+    color: #27ae60;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .add-to-cart {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .add-to-cart:hover {
+    background-color: #2ecc71;
+  }
+  .products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+</style>
+
+
+  </div>
+  <!-- محصولات بیشتر اینجا اضافه می‌شوند -->
+</div>
+nt = item.name;
+
+        const priceEl = document.createElement('div');
+        priceEl.className = 'cart-item-price';
+        priceEl.textContent = item.price.toLocaleString() + ' تومان';
+
+        itemEl.appendChild(nameEl);
+        itemEl.appendChild(priceEl);
+        cartItemsContainer.appendChild(itemEl);
+
+        total += item.price;
+      });
+
+      totalPriceEl.textContent = 'مجموع: ' + total.toLocaleString() + ' تومان';
+    }
+
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+      button.addEventListener('click', e => {
+        const productCard = e.target.closest('.product-card');
+        const name = productCard.getAttribute('data-name');
+        const price = parseInt(productCard.getAttribute('data-price'));
+
+        cart.push({name, price});
+        updateCart();
+      });
+    });
+
+    clearCartBtn.addEventListener('click', () => {
+      cart = [];
+      updateCart();
+    });
+
+    // نمایش اولیه سبد خرید
+    updateCart();
+  </script>
+
+</body>
+</html>
+xtContent = '';
+        return;
+      }
+
+      cartItemsContainer.innerHTML = '';
+
+      let total = 0;
+      cart.forEach((item, index) => {
+        const itemEl = document.createElement('div');
+        itemEl.className = 'cart-item';
+
+        const nameEl = document.createElement('div');
+        nameEl.className = 'cart-item-name';
+        nameEl.textContent = item.name;
+
+        const priceEl = document.createElement('div');
+        priceEl.className = 'cart-item-price';
+        priceEl.textContent = item.price.toLocaleString() + ' تومان';
+
+        const removeBtn = document.createElement('button');
+        removeBtn.className = 'remove-btn';
+        removeBtn.textContent = 'حذف';
+        removeBtn.addEventListener('click', () => {
+          cart.splice(index, 1);
+          updateCart();
+        });
+
+        itemEl.appendChild(nameEl);
+        itemEl.appendChild(priceEl);
+        itemEl.appendChild(removeBtn);
+
+        cartItemsContainer.appendChild(itemEl);
+
+        total += item.price;
+      });
+
+      totalPriceEl.textContent = 'مجموع: ' + total.toLocaleString() + ' تومان';
+    }
+
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+      button.addEventListener('click', e => {
+        const productCard = e.target.closest('.product-card');
+        const name = productCard.getAttribute('data-name');
+        const price = parseInt(productCard.getAttribute('data-price'));
+
+        cart.push({name, price});
+        updateCart();
+      });
+    });
+
+    clearCartBtn.addEventListener('click', () => {
+      cart = [];
+      updateCart();
+    });
+
+    // نمایش اولیه سبد خرید
+    updateCart();
+  </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>سبد خرید</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      direction: rtl;
+      padding: 20px;
+    }
+    .product {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .cart {
+      margin-top: 30px;
+      border-top: 2px dashed #aaa;
+      padding-top: 20px;
+    }
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .remove-btn {
+      background-color: #dc3545;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>محصولات</h2>
+
+  <div id="products">
+    <div class="product">
+      <span>تی شرت</span>
+      <span>500000 تومان</span>
+      <button onclick="addToCart('کفش نایک', 500000)">افزودن</button>
+    </div>
+    <div class="product">
+      <span>کوله پشتی</span>
+      <span>300,000 تومان</span>
+      <button onclick="addToCart('کوله پشتی', 300000)">افزودن</button>
+    </div>
+    <div class="product">
+      <span>ساعت هوشمند</span>
+      <span>2,000,000 تومان</span>
+      <button onclick="addToCart('ساعت هوشمند', 2000000)">افزودن</button>
+    </div>
+  </div>
+
+  <div class="cart">
+    <h3>🛒 سبد خرید</h3>
+    <div id="cart-items"></div>
+    <p><strong>جمع کل: </strong><span id="total">۰</span> تومان</p>
+  </div>
+
+  <script>
+    let cart = [];
+    function addToCart(title, price) {
+      cart.push({ title, price });
+      renderCart();
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      renderCart();
+    }
+
+    function renderCart() {
+      const cartItemsDiv = document.getElementById('cart-items');
+      cartItemsDiv.innerHTML = '';
+      let total = 0;
+
+      cart.forEach((item, index) => {
+        total += item.price;
+        const div = document.createElement('div');
+        div.className = 'cart-item';
+        div.innerHTML = `
+          <span>${item.title} - ${item.price.toLocaleString()} تومان</span>
+          <button class="remove-btn" onclick="removeFromCart(${index})">حذف</button>
+        `;
+        cartItemsDiv.appendChild(div);
+      });
+
+      document.getElementById('total').textContent = total.toLocaleString();
+    }
+  </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>فروشگاه مدرن</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Vazirmatn', sans-serif;
+    }
+
+    body {
+      direction: rtl;
+      padding: 40px;
+      min-height: 100vh;
+      background: linear-gradient(120deg, #c9d6ff, #e2e2e2);
+      transition: background 0.3s ease;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .product {
+      background: #fff;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .product button {
+      background: #4caf50;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 10px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .cart {
+      background: #ffffffcc;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .cart h2 {
+      margin-bottom: 15px;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .cart-item button {
+      background: #f44336;
+      border: none;
+      padding: 4px 8px;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+    }
+
+    #total {
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 10px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🛍️ فروشگاه آنلاین من</h1>
+
+  <div class="container">
+    <div>
+      <div class="product">
+        <span>🎧 هدفون بی‌سیم</span>
+        <span>700,000 تومان</span>
+        <button onclick="addToCart('هدفون بی‌سیم', 700000)">افزودن</button>
+      </div>
+      <div class="product">
+        <span>⌚ ساعت هوشمند</span>
+        <span>2,000,000 تومان</span>
+        <button onclick="addToCart('ساعت هوشمند', 2000000)">افزودن</button>
+      </div>
+      <div class="product">
+        <span>🎒 کیف لپ‌تاپ</span>
+        <span>450,000 تومان</span>
+        <button onclick="addToCart('کیف لپ‌تاپ', 450000)">افزودن</button>
+      </div>
+    </div>
+
+    <div class="cart">
+      <h2>🛒 سبد خرید</h2>
+      <div id="cart-items"></div>
+      <div id="total">جمع کل: ۰ تومان</div>
+    </div>
+  </div>
+
+  <script>
+    const cart = [];
+
+    function addToCart(name, price) {
+      cart.push({ name, price });
+      renderCart();
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      renderCart();
+    }
+
+    function renderCart() {
+      const cartEl = document.getElementById('cart-items');
+      cartEl.innerHTML = '';
+      let total = 0;
+
+      cart.forEach((item, index) => {
+        const div = document.createElement('div');
+        div.className = 'cart-item';
+        div.innerHTML = `
+          <span>${item.name} - ${item.price.toLocaleString()} تومان</span>
+          <button onclick="removeItem(${index})">حذف</button>
+        `;
+        cartEl.appendChild(div);
+        total += item.price;
+      });
+
+      document.getElementById('total').textContent = `جمع کل: ${total.toLocaleString()} تومان`;
+    }
+
+    // تغییر رنگ پس‌زمینه با حرکت موس
+    document.addEventListener('mousemove', (e) => {
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
+
+      const r = Math.floor(200 + x * 55);
+      const g = Math.floor(200 + y * 55);
+      const b = 255;
+
+      document.body.style.background = `rgb(${r}, ${g}, ${b})`;
+    });
+  </script>
+
+</body>
+</html>
+<a href="https://t.me/username" target="_blank" style="
+  position: fixed;
+  bottom: 90px;
+  left: 20px;
+  background-color: #0088cc;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-family: 'Vazirmatn', sans-serif;
+  z-index: 999;
+">
+  💬 پشتیبانی تلگرام
+</a>
+<!DOCTYPE html>@moryculxvk
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>محصولات ما</title>
+  <style>
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      direction: rtl;
+      margin: 0;
+      background: linear-gradient(120deg, #f0f0f0, #ffffff);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 16px;
+    }
+
+    .product-info h3 {
+      font-size: 18px;
+      margin: 0 0 10px;
+    }
+
+    .price {
+      color: green;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .buy-btn {
+      background-color: #0088cc;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .buy-btn:hover {
+      background-color: #006fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align:center; margin-top: 30px;">محصولات ویژه ما</h1>
+
+  <div class="product-grid">
+    <!-- محصول 1 -->
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300x180.png?text=محصول+1" alt="محصول 1">
+      <div class="product-info">
+        <h3>عنوان محصول ۱</h3>
+        <div class="price">۳۵۰٬۰۰۰ تومان</div>
+        <button class="buy-btn">🛒 خرید</button>
+      </div>
+    </div>
+
+    <!-- محصول 2 -->
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300x180.png?text=محصول+2" alt="محصول 2">
+      <div class="product-info">
+        <h3>عنوان محصول ۲</h3>
+        <div class="price">450000 تومان</div>
+        <button class="buy-btn">🛒 خرید</button>
+      </div>
+    </div>
+
+    <!-- محصول 3 -->
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300x180.png?text=محصول+3" alt="محصول 3">
+      <div class="product-info">
+        <h3>عنوان محصول ۳</h3>
+        <div class="price">۷۹۰٬۰۰۰ تومان</div>
+        <button class="buy-btn">🛒 خرید</button>
+      </div>
+    </div>
+
+    <!-- محصول 4 -->
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300x180.png?text=محصول+4" alt="محصول 4">
+      <div class="product-info">
+        <h3>عنوان محصول ۴</h3>
+        <div class="price">۲۱۰٬۰۰۰ تومان</div>
+        <button class="buy-btn">🛒 خرید</button>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
